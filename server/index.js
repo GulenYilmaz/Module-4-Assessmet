@@ -96,7 +96,7 @@ app.get("/api/flower", (req, res) => {
 //I am done :(
 //app.get(`/api/picture`, controller.getpicture);
 //app.delete(`/api/picture/:id`, controller.deletepicture);
-
+let flowers=[];
 
 app.post("/api/flower", (req, res) => {
   let {titleFlower} = req.body;
