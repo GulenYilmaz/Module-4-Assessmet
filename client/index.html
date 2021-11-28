@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Back End Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="container">
+
+<div id="divH1-id">  
+  <h1>Add 3 More Features Page</h1>
+  <div  id="buttonDiv-id"></div>
+  <h2>Features name</h2>
+    <button id="complimentButton">Get a compliment</button>
+    <button id="fortuneButton">Get a fortune</button>
+    <button id="pictureButton">Get a picture</button>
+    <button id="cardButton">Get a card</button>
+    <button id="flowerButton">Get a flower</button>
+  </div>
+</div>
+    
+
+<div id="picture-id">
+  
+  <form>
+  
+  </form>
+</div>
+
+<section id="Features-Container"></section>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+//Get Compliment
+document.getElementById("complimentButton").onclick = function () {
+        axios.get("http://localhost:4000/api/compliment/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+
+//Get Fortune
+document.getElementById("fortuneButton").onclick = function () {
+        axios.get("http://localhost:4000/api/fortune/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+//Get picture
+document.getElementById("pictureButton").onclick = function () {
+        axios.get("http://localhost:4000/api/picture/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+//Get card
+document.getElementById("cardButton").onclick = function () {
+        axios.get("http://localhost:4000/api/card/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+//Get flower
+document.getElementById("flowerButton").onclick = function () {
+        axios.get("http://localhost:4000/api/flower/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+</script>
+<script src="main.js"></script>
+
+  </body>
+</html>
