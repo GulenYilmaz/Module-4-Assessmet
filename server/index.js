@@ -98,4 +98,22 @@ app.get("/api/flower", (req, res) => {
 //app.delete(`/api/picture/:id`, controller.deletepicture);
 
 
+app.post("/api/flower", (req, res) => {
+  let {titleFlower} = req.body;
+  let flowerObj = {
+    titleFlower: titleFlower,
+    
+  }
+  flowers.push(flowerObj);
+  res.status(200).send(flowers);
+})
+
+app.delete("/api/flower/:id", (req, res) => {
+  let index = flowers.findIndex(flower => flower.titleFlower === +req.params.titleFlower)
+  flowers.splice(index, 1);
+  res.status(200).send(flowers);
+})
+
+
+
 app.listen(4000, () => console.log("Server running on 4000"));
