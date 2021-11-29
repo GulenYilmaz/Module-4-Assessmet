@@ -1,18 +1,45 @@
-const pictures =require('./db.json')// need .js  objects
+const musics = require('./db.json');
+let globalId = 6;
+
+
 
 module.exports = {
-
-
-    //get picture call back function 
-    //frond end response
-    getpicture: (req, res) => {
-        res.status(200).send(pictures);
-    },
+  
+  
+  getMusics: (req, res) => {
+    res.status(200).send(musics);
+  },
+  
+  deleteMusic: (req, res) => {
+    let musicIndex = musics.findIndex((music) => music.id === parseInt(req.params.id));
+    musics.splice(musicIndex, 1);
+    res.status(200).send(musics);
+  },
+  
+  createMusic: (req, res) => {
+    let { title, rating, imageURL } = req.body;
     
-    //delete picture
-    deletepicture: (req, res) => {
-        let pictureIndex = pictures.findIndex((picture) => picture.id ===(req.params.id))
-        pictures.splice(pictureIndex, 1);
-        res.status(200).send(pictures);
+    let newMusic = {
+      id: globalId,
+      title: title,
+      rating: rating,
+      imageURL: imageURL
+    };
+
+    musics.push(newMusic);
+    res.status(200).send(musics)
+    globalId++
+  },
+ 
+  updateMusic: (req, res) => {
+    let requestId = req.params.id;
+    let musicIndex = musics.findIndex((music) => music.id === parseInt(req.params.id))
+    
+    if (req.body.type === "plus") {
+        musics[musicIndex].rating++
+    } else if (req.body.type === "minus") {
+        musics[musicIndex].rating--
     }
+    res.status(200).send(musics);
+  }
 };

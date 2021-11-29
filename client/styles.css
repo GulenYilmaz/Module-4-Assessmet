@@ -1,3 +1,86 @@
+
 body{
-    background-color: aqua;
+    background: url("https://media.istockphoto.com/photos/musical-note-decomposing-into-autumn-leaves-copy-space-3d-picture-id1340220643?b=1&k=20&m=1340220643&s=170667a&w=0&h=x-c12xt1D8eDgrtGc5SyNIWszxHLAYpvtK68bi7lqrE=");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+main {
+    display: flex; 
+    justify-content:left;
+}
+button {
+    background-color: #966f28;
+    width: 125px;
+    height: 45px;
+    color: blanchedalmond;
+    border: none;
+    margin: 5px;
+}
+
+input[type='text'] {
+    width: 85%;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid #232323;
+    color: #cfc7ae;
+    background-color: rgb(236, 231, 223);
+}
+
+#ratings-container {
+    width: 85%;
+}
+
+#radio-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#musics-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-cover {
+    width: 200px; 
+    height: 300px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.music-card {
+    background-color: blanchedalmond;
+    width: 200px;
+    margin: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.music-title {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.music-rating {
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+.btns-container {
+    width: 100%; 
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px;
+}
+
+.btns-container > button {
+    width: 20px;
 }

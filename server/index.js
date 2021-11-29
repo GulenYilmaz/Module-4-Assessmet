@@ -1,6 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-const controller = require('./controller.js')
 
 const app = express();
 
@@ -90,30 +89,15 @@ app.get("/api/flower", (req, res) => {
   
 });
 
+const {
+  getMusics,
+  deleteMusic,
+  createMusic,
+  updateMusic,
+} = require("./controller");
 
-
-//I tryed  and write a code more then one week durig the  holiday, cant go anywhere and spend time with my family but unfortunately, it was not work.
-//I am done :(
-//app.get(`/api/picture`, controller.getpicture);
-//app.delete(`/api/picture/:id`, controller.deletepicture);
-let flowers=[];
-
-app.post("/api/flower", (req, res) => {
-  let {titleFlower} = req.body;
-  let flowerObj = {
-    titleFlower: titleFlower,
-    
-  }
-  flowers.push(flowerObj);
-  res.status(200).send(flowers);
-})
-
-app.delete("/api/flower/:id", (req, res) => {
-  let index = flowers.findIndex(flower => flower.titleFlower === +req.params.titleFlower)
-  flowers.splice(index, 1);
-  res.status(200).send(flowers);
-})
-
-
-
-app.listen(4000, () => console.log("Server running on 4000"));
+app.get(`/api/musics`, getMusics);
+app.delete(`/api/musics/:id`, deleteMusic);
+app.post(`/api/musics`, createMusic);
+app.put(`/api/musics/:id`, updateMusic)
+app.listen(2000, () => console.log("Server running on 2000"));

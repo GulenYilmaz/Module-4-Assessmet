@@ -31,7 +31,7 @@
 <script>
 //Get Compliment
 document.getElementById("complimentButton").onclick = function () {
-        axios.get("http://localhost:4000/api/compliment/")
+        axios.get("http://localhost:2000/api/compliment/")
             .then(function (response) {
               const data = response.data;
               alert(data);
@@ -40,7 +40,7 @@ document.getElementById("complimentButton").onclick = function () {
 
 //Get Fortune
 document.getElementById("fortuneButton").onclick = function () {
-        axios.get("http://localhost:4000/api/fortune/")
+        axios.get("http://localhost:2000/api/fortune/")
             .then(function (response) {
               const data = response.data;
               alert(data);
@@ -48,7 +48,7 @@ document.getElementById("fortuneButton").onclick = function () {
       };
 //Get picture
 document.getElementById("pictureButton").onclick = function () {
-        axios.get("http://localhost:4000/api/picture/")
+        axios.get("http://localhost:2000/api/picture/")
             .then(function (response) {
               const data = response.data;
               alert(data);
@@ -56,7 +56,7 @@ document.getElementById("pictureButton").onclick = function () {
       };
 //Get card
 document.getElementById("cardButton").onclick = function () {
-        axios.get("http://localhost:4000/api/card/")
+        axios.get("http://localhost:2000/api/card/")
             .then(function (response) {
               const data = response.data;
               alert(data);
@@ -64,7 +64,7 @@ document.getElementById("cardButton").onclick = function () {
       };
 //Get flower
 document.getElementById("flowerButton").onclick = function () {
-        axios.get("http://localhost:4000/api/flower/")
+        axios.get("http://localhost:2000/api/flower/")
             .then(function (response) {
               const data = response.data;
               alert(data);
@@ -72,6 +72,85 @@ document.getElementById("flowerButton").onclick = function () {
       };
 </script>
 <script src="main.js"></script>
+
+
+
+
+
+
+<header>
+  <h1>Music List</h1>
+</header>
+
+
+  <main>
+
+    <form>
+        <input 
+            type='text'
+            id="title"
+            placeholder="What's the music's title?"/>
+        <input 
+            type='text'
+            id="img"
+            placeholder='Paste an image URL'/>
+        <section id="ratings-container">
+            <p>Rate the music:</p>
+            <div id="radio-container">
+                <label for="one">
+                    <input
+                        type="radio"
+                        name="ratings"
+                        value="1"
+                        id="one"/>
+                    1
+                </label>
+                <label for="two">
+                    <input
+                        type="radio"
+                        name="ratings"
+                        value="2"
+                        id="two"/>
+                    2
+                </label>
+                <label for="three">
+                    <input
+                        type="radio"
+                        name="ratings"
+                        value="3"
+                        id="three"/>
+                    3
+                </label>
+                <label for="four">
+                    <input
+                        type="radio"
+                        name="ratings"
+                        value="4"
+                        id="four"/>
+                    4
+                </label>
+                <label for="five">
+                    <input
+                        type="radio"
+                        name="ratings"
+                        value="5"
+                        id="five"/>
+                    5
+                </label>
+            </div>
+        </section>
+        <button>add music</button>
+    </form>
+
+    <section id="musics-container"></section>
+
+  </main>
+
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="main.js"></script>
+
+
 
   </body>
 </html>
