@@ -28,6 +28,36 @@
     "title": "Memories-Maroon 5",
     "rating": 4,
     "imageURL" : "https://sp-ao.shortpixel.ai/client/q_glossy,ret_img,w_500,h_600/https://dujour.com/wp-content/uploads/815a5d8bafd1-500x600.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Adele   Hello",
+    "rating": 5,
+    "imageURL" : "https://dmn-dallas-news-prod.cdn.arcpublishing.com/resizer/-htExhLWkv02c8RlYHV7sjscFJg=/1660x934/smart/filters:no_upscale()/arc-anglerfish-arc2-prod-dmn.s3.amazonaws.com/public/GHCYGX4DNRRRVBQFGXOD3E5AWY.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Apple Of My Eye - Dolores O’Riordan",
+    "rating": 4,
+    "imageURL" : "https://images.genius.com/82e5b5da59b1df3337f7a2677f45564d.1000x1000x1.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Michael Jackson - Thriller ",
+    "rating": 5,
+    "imageURL" : "https://i5.walmartimages.com/asr/210ee130-d59c-4ff3-be23-839e73e5cf0f_1.e36fb869162ae1107181d84bb351ae7e.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+  },
+  {
+    "id": 9,
+    "title": "Pink - Beautiful Trauma - Vinyl",
+    "rating": 3,
+    "imageURL" : "https://i5.walmartimages.com/asr/4e1d171f-6e6c-45b3-b0ef-72f991b3967c_1.973173ff608e62c289be28ff6999f8e6.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+  },
+  {
+    "id": 10,
+    "title": "Memories-Maroon 5",
+    "rating": 4,
+    "imageURL" : "https://sp-ao.shortpixel.ai/client/q_glossy,ret_img,w_500,h_600/https://dujour.com/wp-content/uploads/815a5d8bafd1-500x600.jpg"
   }
 
 
